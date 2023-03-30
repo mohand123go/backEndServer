@@ -38,6 +38,21 @@ app.use(cors())
 // }
 // );
 
+app.get('store_key/ios', function(req, res) {
+    console.log('req.body', req.body)
+    res.status(200);
+         res.json(
+            [
+                {
+                  "ulid": "J019F8GX4KKGQJG14DH7AP2G23", 
+                  "key_id": "QR9L9L7VK2",
+                  "applications": 
+                    [123,1221] 
+                }
+              ]
+         );
+}
+);
 app.post('/store_key/ios', function(req, res) {
     console.log('req.body', req.body)
     res.status(200);
